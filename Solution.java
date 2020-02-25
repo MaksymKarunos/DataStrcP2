@@ -47,8 +47,10 @@
  *      10000   r6  N/A           1891116000  17100300    1314300      r>n         r>n
  *  
  * 
- * Quicksort is the fastest sort given that numbers are completely random, however, it has O(n^2) time complexity if the array is already sorted or has a lot of repetions in which case it's likey to get a bad pivot. Bucket sort
- * is not always good either. Bucket Sort heavily realies on uniform distribution of numbers. Also, Quick Sort is more likey to run out memory when is n large enough with lots of repetions.
+ * Quicksort is the fastest sort given that the pivot is chosen to be exactly the median value in the patition, in other words, it works best whenever we partion array exatly in half. H
+ * However, QuickSort has worst-case O(n^2) time complexity if the array is already sorted in reverse order or has a lot of repetions in which case it's guaranteed to get a bad pivot. Bucket sort
+ * is not always good either. Bucket Sort heavily realies on uniform distribution of numbers. 
+ * Based on the experiement, Quick Sort is more likey to run out memory when is n large enough with lots of repetions.
  * For example, on the large input of 10000000 with no repetions. QuickSort is 6 times faster than BucketSort since elements are clustered which hurts time complexity of BucketSort. Conversely looking at n = 10000, r =10000, for smaller input size with lots of repetions BucketSort is better
  * Since sort in the bucket is insertion sort O(n) for sorted ( in our case the same elements).
  *
